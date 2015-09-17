@@ -1,0 +1,12 @@
+Source: sqldb
+Maintainer: pehkeong <pehkeong@hotmail.com>
+Section: misc
+Priority: optional
+Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 9)
+
+Package: sqldb
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Instantiate a Azure SQL DB Instance
+ SQLDB creates an Azure SQL DB instance so you can start development immediately.

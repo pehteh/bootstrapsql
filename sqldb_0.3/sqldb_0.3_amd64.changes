@@ -1,0 +1,45 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Tue, 15 Sep 2015 01:21:12 -0700
+Source: sqldb
+Binary: sqldb
+Architecture: source amd64
+Version: 0.3
+Distribution: trusty
+Urgency: low
+Maintainer: pehkeong <pehkeong@hotmail.com>
+Changed-By: pehkeong <pehkeong@hotmail.com>
+Description: 
+ sqldb      - Instantiate a Azure SQL DB Instance
+Closes: 1 2
+Changes: 
+ sqldb (0.3) trusty; urgency=low
+ .
+   * Initial release. (Closes: #1)
+   * Adding FreeTDS and ODBC (Closes: #2)
+Checksums-Sha1: 
+ a29260900594006eef558deb82e4d23ed27d3a0c 985 sqldb_0.3.dsc
+ f2a2013787058b0d320273062de382f7541fc813 1896 sqldb_0.3.tar.gz
+ aee5d4035db5aa3e16816e1415ffa20c7e66cf50 1454 sqldb_0.3_amd64.deb
+Checksums-Sha256: 
+ 4c11c670030a08f537979094da3410aee24c391af1c9715c81ddd8be65244399 985 sqldb_0.3.dsc
+ 037355cc8095c46e9d167c39e36a50070ae5651bd12f422759635c5cb3370a5b 1896 sqldb_0.3.tar.gz
+ 68315b04acfaf101945f824f64a89c9d10d1495b0ab7696051fcac3667b7b175 1454 sqldb_0.3_amd64.deb
+Files: 
+ 2b223621619527952a96a57d66dacb52 985 misc optional sqldb_0.3.dsc
+ 81e2c42d883b70303c59d4d70416c126 1896 misc optional sqldb_0.3.tar.gz
+ d81053383d6b0c7024487a5af3f82081 1454 misc optional sqldb_0.3_amd64.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQEcBAEBAgAGBQJV+QiaAAoJEPKFQ8xXeTpdugQIAIhMfqNETj3bc9EENuW4zBqx
+wTJIHAGrx70oheMNwPGNL81V/1E9LlibTyCPvLLrlnXBQqdjNebPmDWDBj8JGLN2
+0aGAghR6A98/Bltx1XWq2Hc6NDinq5iLFg0lG+y4EG+/OzESHwtSrr92xDynd0bC
+PYtaK+WIss5X7gOh2t++C75+EZ3UOiQXq7UKIS2H4ihSWM7knRjUQiYF/UJxv18Z
+sED6l1UwXgx29JNCImcq74AB/rmwyfop+5/Nt/NYFG9EgtHEjegI5zX8Ze0wRUPw
+63DfRXQg1HP7rUUBjgwYnk0GLnxfJVNeq4WxQOXVXkBbl+YrLU7zNvcF8adSDTg=
+=l0vF
+-----END PGP SIGNATURE-----

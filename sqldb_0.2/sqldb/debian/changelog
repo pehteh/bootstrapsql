@@ -1,0 +1,5 @@
+sqldb (0.2) trusty; urgency=low
+
+  * Initial release. (Closes: #1)
+
+ -- pehkeong <pehkeong@hotmail.com>  Tue, 15 Sep 2015 01:21:12 -0700

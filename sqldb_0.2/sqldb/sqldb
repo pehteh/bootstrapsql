@@ -1,0 +1,15 @@
+import requests
+import random, string
+
+def newDBName(length):
+	return ''.join(random.choice(string.lowercase) for i in range(length))
+
+payload = { 'dbname' : newDBName(8) }
+url = 'https://microsoft-apiapp30c89944522140c9941160f8733cf484.azurewebsites.net/api/crud'
+response = requests.post(url,params=payload)
+
+print('\n')
+print('Your new database info')
+print('---------------------------------')
+print(response.text)
+print('\n')
