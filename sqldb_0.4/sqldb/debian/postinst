@@ -2,4 +2,4 @@
 
 set -e
 
-python -u /usr/bin/sqldb
+python -u /usr/bin/sqldbnew

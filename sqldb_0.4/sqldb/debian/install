@@ -1,1 +1,2 @@
-sqldb usr/bin
+sqldbnew usr/bin
+sqldbconnect usr/bin
