@@ -1,0 +1,10 @@
+Package: sqldb
+Version: 0.6
+Architecture: amd64
+Maintainer: pehkeong <pehkeong@hotmail.com>
+Installed-Size: 31
+Depends: unixodbc, tdsodbc
+Section: misc
+Priority: optional
+Description: Instantiate a Azure SQL DB Instance
+ SQLDB creates an Azure SQL DB instance so you can start development immediately.
