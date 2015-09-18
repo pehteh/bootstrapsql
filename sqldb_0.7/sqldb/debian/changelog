@@ -1,0 +1,8 @@
+sqldb (0.7) trusty; urgency=low
+
+  * Initial release. (Closes: #1)
+  * Adding FreeTDS and ODBC (Closes: #2)
+  * Adding isql (Closes: #3)
+  * Adding SampleQuery (Closes: #4)
+  
+ -- pehkeong <pehkeong@hotmail.com>  Tue, 15 Sep 2015 01:21:12 -0700

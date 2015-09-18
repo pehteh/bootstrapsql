@@ -1,0 +1,1 @@
+isql -v sqldb "__username__@bootstrapproto.database.windows.net" "__password__"

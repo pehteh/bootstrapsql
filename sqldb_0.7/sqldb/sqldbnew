@@ -1,0 +1,51 @@
+import requests
+import random, string
+import json
+import fileinput
+
+def newDBName(length):
+    return ''.join(random.choice(string.lowercase) for i in range(length))
+
+payload = { 'dbname' : newDBName(8) }
+url = 'https://microsoft-apiapp30c89944522140c9941160f8733cf484.azurewebsites.net/api/crud'
+response = requests.post(url,params=payload)
+dbInfo = json.loads(response.text)
+
+with open("/etc/odbc.ini", "w") as myfile:
+    myfile.write("# set a DSN")
+    myfile.write("\n[sqldb] ")
+    myfile.write("\nDescription = Connection to Azure SQL DB")
+    myfile.write("\nDriver      = FreeTDS")
+    myfile.write("\nDatabase    = " + dbInfo['dbName'])
+    myfile.write("\nServerName  = myserver")
+    myfile.write("\nUser  = " + dbInfo['username'] + "@bootstrapproto.database.windows.net")
+    myfile.write("\nPassword  = " + dbInfo['password'])
+
+with open("/etc/odbcinst.ini", "w") as myfile:
+    myfile.write("[FreeTDS]")
+    myfile.write("\nDescription = FreeTDS Driver")
+    myfile.write("\nDriver = /usr/lib/x86_64-linux-gnu/odbc/libtdsodbc.so")
+
+with open("/etc/freetds/freetds.conf", "w") as myfile:
+    myfile.write("[myserver]")
+    myfile.write("\nhost = bootstrapproto.database.windows.net")
+    myfile.write("\nport = 1433")
+    myfile.write("\ntds version = 7.0")
+
+with open("/usr/bin/sqldbconnect", "w") as myfile:
+    myfile.write("isql sqldb '" + dbInfo['username'] + "@bootstrapproto.database.windows.net' '" + dbInfo['password'] + "'")
+
+print("\nYour database information is stored in /etc/odbc.ini")
+print("--------------------------------------------------")
+print("Servername   : bootstrapproto.database.windows.net")
+print("Database     : " + dbInfo['dbName'])
+print("Username     : " + dbInfo['username'])
+print("Password     : " + dbInfo['password'])
+print("--------------------------------------------------")
+
+print("\n-> Getting Started:")
+print("   1) Connect using 'sqldbconnect' ")
+print("   2) Query sample data 'select * from sampledata' ")
+
+print("\nYour database has been created and will be active for 30 days.")
+print(">> Please register on Azure.com to extend the trial period. <<")
